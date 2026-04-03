@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+  
+  h1 {
+    @apply text-4xl font-bold text-gray-900;
+  }
+  
+  h2 {
+    @apply text-3xl font-semibold text-gray-800;
+  }
+  
+  h3 {
+    @apply text-2xl font-medium text-gray-700;
+  }
+}
+
+/* Custom components */
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium shadow-sm;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-gray-700 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors font-medium shadow-sm;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6 border border-gray-200;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-shadow;
+  }
+  
+  /* Sentra AI specific components */
+  .sentra-card {
+    @apply bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl shadow-lg p-8 border border-blue-100;
+  }
+  
+  .ai-pill {
+    @apply bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium;
+  }
+
+  .detail-label {
+    @apply text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-1;
+  }
+
+  .detail-value {
+    @apply text-sm font-bold text-gray-800;
+  }
+
+}/* Custom color variables if not using Bootstrap's theme colors */
+:root {
+  --teal: #00C49F;
+  --teal-light: #E6F9F6;
+}
+
+/* Custom background color classes */
+.bg-teal-light {
+  background-color: var(--teal-light);
+}
+
+.text-teal {
+  color: var(--teal);
+}
+
+/* Hover effects */
+.hover-bg-teal:hover {
+  background-color: rgba(0, 196, 159, 0.04);
+}
+
+.hover-text-teal:hover {
+  color: var(--teal) !important;
+}
+
+/* Button styling */
+.btn-outline-teal {
+  color: var(--teal);
+  border-color: var(--teal);
+}
+
+.btn-outline-teal:hover {
+  background-color: var(--teal);
+  border-color: var(--teal);
+  color: white;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.table th.cursor-pointer:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.badge {
+  padding: 0.35em 0.65em;
+  font-weight: 600;
+}
+
+.page-link {
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Row hover effect */
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.05);
+  transition: background-color 0.2s;
+}
