@@ -50,13 +50,13 @@ const {
           </div>
         </div>
 
-<!--        <button-->
-<!--            @click="openAddModal()"-->
-<!--            class="group bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5"-->
-<!--        >-->
-<!--          <font-awesome-icon icon="fas fa-plus" class="w-4 h-4 transform group-hover:rotate-90 transition-transform duration-300" />-->
-<!--          {{ transStore.t('rolegroup.create') }}-->
-<!--        </button>-->
+        <button
+            @click="openAddModal()"
+            class="group bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5"
+        >
+          <font-awesome-icon icon="fas fa-plus" class="w-4 h-4 transform group-hover:rotate-90 transition-transform duration-300" />
+          {{ transStore.t('rolegroup.create') }}
+        </button>
       </div>
     </div>
       
