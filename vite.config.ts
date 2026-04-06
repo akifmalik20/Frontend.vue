@@ -18,5 +18,6 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true, // ✅ clears dist/ before building
+
   }
 })
