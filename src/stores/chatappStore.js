@@ -52,13 +52,13 @@ export const useChatStore = defineStore('chat', {
             }
 
             this.isConnecting = true;
-            // const baseURL = axiosInstance.defaults.baseURL; // e.g. "http://127.0.0.1:8000/"
-            // const wsBase = baseURL.replace(/^http/, 'ws').replace(/\/$/, ''); // → "ws://127.0.0.1:8000"
-            //
-            // const url = `${wsBase}/ws/chat/?token=${token}`;
-            // this.socket = new WebSocket(url);
-            const url = `ws://10/ws/chat/?token=${token}`;
+            const baseURL = axiosInstance.defaults.baseURL; // e.g. "http://127.0.0.1:8000/"
+            const wsBase = baseURL.replace(/^http/, 'ws').replace(/\/$/, ''); // → "ws://127.0.0.1:8000"
+
+            const url = `${wsBase}/ws/chat/?token=${token}`;
             this.socket = new WebSocket(url);
+            // const url = `ws://10/ws/chat/?token=${token}`;
+            // this.socket = new WebSocket(url);
 
             this.socket.onopen = () => {
                 this.isConnected = true;
